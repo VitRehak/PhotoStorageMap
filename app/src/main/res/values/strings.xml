@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PhotoStorageMap</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_image">ImageActivity</string>
+    <string name="title_activity_add_image">AddImageActivity</string>
+    <string name="title_activity_add_image_camera">AddImageCameraActivity</string>
+    <string name="title_activity_add_image_file">AddImageFileActivity</string>
 </resources>

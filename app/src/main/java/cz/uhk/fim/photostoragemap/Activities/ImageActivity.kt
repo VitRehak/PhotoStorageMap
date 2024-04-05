@@ -1,0 +1,31 @@
+package cz.uhk.fim.photostoragemap.Activities
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.recyclerview.widget.RecyclerView
+import androidx.room.Room
+import cz.uhk.fim.photostoragemap.App
+import cz.uhk.fim.photostoragemap.R
+import cz.uhk.fim.photostoragemap.model.ImageDatabase
+import cz.uhk.fim.photostoragemap.ui.image.ImageScreen
+import cz.uhk.fim.photostoragemap.ui.theme.PhotoStorageMapTheme
+
+class ImageActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        setContent {
+            PhotoStorageMapTheme{
+                ImageScreen()
+            }
+        }
+    }
+}

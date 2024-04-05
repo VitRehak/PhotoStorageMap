@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,10 +13,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PhotoStorageMap"
         tools:targetApi="31">
+
+        <provider
+            android:name=".ComposeFileProvider"
+            android:authorities="cz.uhk.fim.photostoragemap.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity
+            android:name=".Activities.AddImageCameraActivity"
+            android:exported="false"
+            android:label="@string/title_activity_add_image_camera"
+            android:theme="@style/Theme.PhotoStorageMap" />
+        <activity
+            android:name=".Activities.AddImageFileActivity"
+            android:exported="false"
+            android:label="@string/title_activity_add_image"
+            android:theme="@style/Theme.PhotoStorageMap" />
+        <activity
+            android:name=".Activities.ImageActivity"
+            android:exported="false"
+            android:label="@string/title_activity_image"
+            android:theme="@style/Theme.PhotoStorageMap" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.PhotoStorageMap">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,5 +50,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
